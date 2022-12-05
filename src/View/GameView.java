@@ -11,14 +11,14 @@ public class GameView implements IGameView{
         StadiumView stadiumView = new StadiumView();
         teamView.printTeamName(team);
         if(gameModel.result == 1){
-            System.out.print(" Winner");
+            System.out.println(" Winner");
         } else if(gameModel.result == -1){
-            System.out.print(" Defeat");
+            System.out.println(" Defeat");
         }
         else {
-            System.out.print(" Tie");
+            System.out.println(" Tie");
         }
-        System.out.print("The team played: ");
+        System.out.println("The team played: ");
         stadiumView.printStadium(stadium);
     }
     @Override
@@ -30,5 +30,8 @@ public class GameView implements IGameView{
         teamView.printTeam(team2);
         System.out.println("-----------------------------");
 
+    }
+    public void printInjury(TeamModel team){
+        System.out.println("Injury in this game"+ team.name);
     }
 }

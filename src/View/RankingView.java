@@ -9,7 +9,15 @@ public class RankingView implements IRankingView{
         System.out.print("Points of ");
         TeamView teamView = new TeamView();
         teamView.printTeamName(team);
-        System.out.print(": " + ranking.points);
+        System.out.println(": " + ranking.points);
+        System.out.println("-----------------------------");
+    }
+
+    public void printPoints(RankingModel ranking) {
+        System.out.println("-----------------------------");
+        System.out.print("Points");
+
+        System.out.println(": " + ranking.points);
         System.out.println("-----------------------------");
     }
 }
